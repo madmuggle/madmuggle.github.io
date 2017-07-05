@@ -1,0 +1,141 @@
+# Dockerfile指令：ENTRYPOINT&CMD, COPY&ADD
+2017/02/06 14:32:00
+Docker
+
+
+## ENTRYPOINT & CMD
+
+当ENTRYPOINT和CMD只有一个存在于Dockerfile中，并且启动镜像时不指定参数，那么这两个命令可以达到相同的效果。比如下面两个Dockerfile：
+
+```
+FROM alpine
+ENTRYPOINT [ "echo", "arg1" ]
+```
+
+```
+FROM alpine
+CMD [ "echo", "arg1" ]
+```
+
+当你以不带参数启动镜像：
+
+```
+docker run myimg
+```
+
+上面两个Dockerfile效果是一样的，都是：
+
+```
+arg1
+```
+
+### 启动参数
+
+一旦启动时带上启动参数，两者的效果就完全不一样了：
+
+```
+docker run myimg echo a b c
+```
+
+ENTRYPOINT版本的运行结果是：
+
+```
+arg1 echo a b c
+```
+
+CMD版本的运行结果是：
+
+```
+a b c
+```
+
+### 同时存在ENTRYPOINT和CMD
+
+当ENTRYPOINT和CMD同时存在于Dockerfile的时候，CMD的内容会统统作为ENTRYPOINT的参数。比如当Dockerfile的内容是：
+
+```
+ENTRYPOINT [ "mycmd", "arg1" ]
+CMD [ "echo", "hello" ]
+```
+
+那么当你运行这个镜像：
+
+```
+docker run myimg
+```
+
+其实运行的是：
+
+```
+mycmd arg1 echo hello
+```
+
+当你带上参数去运行这个镜像：
+
+```
+docker run myimg a b c
+```
+
+其实运行的是：
+
+```
+mycmd arg1 a b c
+```
+
+### 使用原则
+
+可以看到，CMD会整个被`docker run`后面的参数替换掉。它只是在特殊的情况下，表现出了和ENTRYPOINT相同的效果而已。
+
+所以对于ENTRYPOINT和CMD，使用的基本原则是：入口用ENTRYPOINT指定，CMD指定默认参数。
+
+
+## COPY & ADD
+
+听说Docker最初是没有COPY命令的，只有ADD。我没有去搜索考证，估计八九不离十，因为这两个命令在功能上差不多，只有一些细节不同。
+
+简单来讲，COPY在功能上是ADD的一个子集。
+
+### 支持URL
+
+ADD除了支持本地文件的操作，还支持URL操作，比如下面的操作是可行的：
+
+```
+ADD http://a.b.com/d.js /tmp/
+```
+
+然而这个功能并没有太大用处，因为Docker依赖Linux环境，所以你完全可以：
+
+```
+RUN curl http://a.b.com/d.js > /tmp/d.js
+```
+
+### 自动解压
+
+ADD比COPY多的另外一个功能是“解压”。如果发现源路径是压缩文件，它会自动解压并放到目的路径。当你写上：
+
+```
+ADD /a/b/c/d.gz /tmp/
+```
+
+目标container里面的`/tmp`路径下，存放的是解压后的文件。
+
+这个功能依旧用处不大，因为你可以：
+
+```
+COPY /a/b/c/d.gz /tmp/
+RUN gzip -d /tmp/d.gz
+```
+
+而且这个功能在用处不大的前提下还带来了几个问题：
+
+- 无法识别所有的压缩种类，对于无法识别的压缩包，直接进行拷贝。行为不一致。
+- 当源路径是URL的时候，不进行自动解压。
+
+如你所见，ADD指令的规则非常混乱。
+
+如果不是考虑到了兼容性，估计ADD早就被移除Docker了。
+
+### 使用原则
+
+所以对于COPY和ADD，使用原则是：不要用ADD。
+

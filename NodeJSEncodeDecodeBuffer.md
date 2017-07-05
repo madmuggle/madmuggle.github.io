@@ -1,0 +1,67 @@
+# Node.js的编码解码与Buffer
+2017/02/24 14:32:00
+Javascript
+
+
+## 加密也是编码
+
+Node.js有个做法我非常喜欢，它把Base64和UTF8看作同种类型的东西，并且内建的Buffer对象以同样形式支持这两者。这种做法不仅方便，而且很合逻辑。
+
+所谓编码，并不一定要与码值直接对应，UTF8就是把码值拆散了，并且不连续地放在几个字节里面。*只要是一一对应，且能还原回来，都可以叫做“编码”*。
+
+所以Base64，ROT13这些都是货真价实的编码。ROT13通常被视作一种简单的“加密”，但总结一下你会发现，所有的加密都可以看作是编码。
+
+
+## Node.js的Buffer
+
+在Python里，要将字符串编码成UTF8，可以调用字符串的`encode`方法。但要编码成Base64，则需要引入`base64`这个库。
+
+Node.js则要自然得多，配合Buffer就能轻松完成这些工作。比如要用Base64方式编码只需要：
+
+```js
+Buffer.from('hello').toString('base64')
+//=> 'aGVsbG8='
+```
+
+解码类似：
+
+```js
+Buffer.from('aGVsbG8=', 'base64').toString()
+//=> 'hello'
+```
+
+上面的'base64'可以直接替换成'utf8'，或者其他格式，比如'hex'：
+
+```js
+Buffer.from('hello').toString('hex')
+//=> '68656c6c6f'
+```
+
+解码'hex'：
+
+```js
+Buffer.from('68656c6c6f', 'hex').toString()
+//=> 'hello'
+```
+
+虽然Buffer目前支持的格式不多，比如`utf16`, `utf32`, `gbk`等等都不支持，但其实这些编码也很少用到。当今目光所及之处全是`utf8`。
+
+
+## 浏览器
+
+浏览器没有`Buffer`对象，处理Base64就不如Node.js那么自然了，你需要专用的函数`atob`和`btoa`。
+
+编码到Base64:
+
+```js
+btoa('hello')
+//=> "aGVsbG8="
+```
+
+解码Base64:
+
+```js
+atob('aGVsbG8=')
+//=> "hello"
+```
+

@@ -1,0 +1,73 @@
+# Segmentation Fault时，进程的返回值
+2017/01/28 01:15:00
+Linux
+
+
+## 进程的返回值
+
+Unix用进程的返回值表示程序执行是否成功，以及不成功时失败的原因。然而当程序出现非常意外的情况，产生Segmentation Fault的时候，这个原则是否依旧适用呢？
+
+
+## 实验
+
+有C语言在手，实现Segmentation Fault是非常轻松的事情，非法的内存操作会产生它。访问0地址大概是最简单的实践途径了。
+
+```c
+main() {
+	*(int *)0 = 1;
+}
+```
+
+只需要编译运行上面那个简单的程序，就能轻松产生Segmentation Fault了。
+
+```sh
+cc a.c -o a && ./a
+#=> Segmentation fault: 11
+```
+
+我们再来看下进程的返回值
+
+```sh
+echo $?
+#=> 139
+```
+
+非0 ！证明即使发生了Segmentation Fault，进程的返回值也是可以信赖的。
+
+
+## Go
+
+Go语言和C语言一样提供了指针，拥有直接操纵内存的能力，那么用Go语言是否能够复现这种情形呢？
+
+直接写程序验证一下：
+
+```go
+func main() {
+	*(*int)(unsafe.Pointer(uintptr(0))) = 1
+}
+```
+
+编译运行，发现和C的情况有所不同：
+
+```sh
+go build b.go && ./b
+#=> panic: runtime error: invalid memory address or nil pointer dereference
+#   ...
+```
+
+的确是产生了一个运行时错误，但是查看返回值时会发现：
+
+```sh
+echo $?
+#=> 2
+```
+
+非零，但也不是C那样的139。
+
+
+## 总结
+
+虽然依旧存在一些未解决的疑惑，但可以确定的是，进程的返回值是可以信赖的，即使程序在运行过程中发生了Segmentation Fault也是如此。
+
+上面的所有例子均只在Darwin上试验过，没有在Linux上尝试。
+

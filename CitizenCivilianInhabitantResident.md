@@ -1,0 +1,21 @@
+# Citizen, Civilian, Inhabitant And Resident
+2017/05/25 14:40:00
+Misc
+
+
+Today I met a new word *inhabitant*, and after searching the dictionary for explanation, I feel it's just like the word *resident*. Then I search the Internet for more information about them, and I find there are many English words who stand for "people who stay in some place". Including *citizen*, *civilian*, *inhabitant* and *resident*.
+
+So what's the difference between them?
+
+Again, these are the explanations from Mac OS's Dictionary Application:
+
+*citizen* is a legally recognized subject or national of a state or commonwealth, either native or naturalized.
+
+*civilian* is a person not in the armed services or the police force.
+
+*inhabitant* is a person or animal that lives in or occupies a place.
+
+*resident* is a person who lives somewhere permanently or on a long-term basis.
+
+In short, citizen is about country, civilian is about war. Inhabitant and resident are more general purposing and are very similar to each other. But usually resident can stands for visitors who stay only for temporary.
+

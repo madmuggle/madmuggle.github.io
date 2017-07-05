@@ -1,0 +1,38 @@
+# The Direction Of Writting
+2017/05/16 18:47:00
+Misc
+
+
+## Ordinary: Left to Right
+
+Writing from left to right is the commonly used way. Most languages follow this rule. Including English(and most Europe languages), Sanskrit, modern Chinese, Japanese, etc.
+
+But that is not the only way for writing.
+
+
+## Right to Left
+
+Arabic and languages based on Arabic alphabet like Farsi are written from right to left, then top to bottom. Hebrew is written from right to left, too.
+
+I have been wondering how could Arabic children keep their hands clean when writting with a pencil. Chinese is written from left to right, but I still get my hands dirty after some writting when I was a child.
+
+Maybe they haven't solved this problem yet. Or maybe they just don't write with pencil.
+
+
+## Top to Bottom
+
+Mongolian and Manchu Language are written from top to bottom, then right to left. So does ancient Chinese.
+
+Mongolian and Manchu use Uighur script, which is an alphabet set created by Uigurs, while Uigurs use Arabic alphabet themselves. Isn't it interesting?
+
+
+## Sum up
+
+So there are some simple skills to distinguish the writing direction of languages:
+
+- Languages based on Latin alphabet, Cyrillic alphabet or Sanskrit alphabet are written from left to right.
+- Languages based on Arabic alphabet are written from right to left.
+- Languages based on Uighur script are written from top to bottom.
+
+As most writing systems are phonogram, and those are the most commonly used alphabet sets, this skill can be very useful.
+

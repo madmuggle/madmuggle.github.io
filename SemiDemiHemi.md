@@ -1,0 +1,25 @@
+# Semi, Demi, Hemi
+2017/05/21 01:00:00
+Misc
+
+
+## Semicolon & Demigod
+
+The first prefix who stands for "half" that I learned is "semi". Colon stands for ":", so semicolon stands for ";". Pretty easy to understand.
+
+Then I learned the prefix "demi" from movies. "Demigod" is a popular word these years. You can hear it from movies like [The Avengers][theavengers], where Thor was called demigod; Or you can hear it from Disney animation like [Moana][moana], where Maui was called demigod, too.
+
+
+## Why?
+
+Why there are so many prefixes that stand for the same thing? I just find a good explanation from [here][answer].
+
+> "semi-" is from the Latin for "half", "hemi-" is from the Greek for "half", "demi-" is from the French for "half".
+
+Historical thing again.
+
+
+[answer]: http://www.24en.com/study/words/2014-10-20/170876.html
+[theavengers]: https://en.wikipedia.org/wiki/The_Avengers_(2012_film)
+[moana]: https://en.wikipedia.org/wiki/Moana_(2016_film)
+

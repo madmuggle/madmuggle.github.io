@@ -1,0 +1,14 @@
+# The Latinized Chinese: Latinxua Sin Wenz
+2017/06/01 10:07:00
+Misc
+
+
+The [Pinyin][wikipinyin] is the official romanization system for Chinese, but it is not the only one. Besides Pinyin, there are at least 2 similar systems: [Gwoyeu Romatzyh][wikigwoyeuromatzyh] and [Latinxua Sin Wenz][wikilatinxuasinwenz].
+
+The *Latinxua Sin Wenz* is the most interesting one, because it's more than just usable, it had been used in over 300 publications once. And it is much simpler than *Pinyin* and *Gwoyeu Romatzyh* as it was usually written without tones.
+
+
+[wikipinyin]: https://en.wikipedia.org/wiki/Pinyin
+[wikigwoyeuromatzyh]: https://en.wikipedia.org/wiki/Gwoyeu_Romatzyh
+[wikilatinxuasinwenz]: https://en.wikipedia.org/wiki/Latinxua_Sin_Wenz
+

@@ -1,0 +1,94 @@
+# package.json并不是npm的一部分
+2017/01/17 12:18:00
+Javascript
+
+
+## 长时间的误解
+
+之前一直以为`package.json`这个文件是`npm`引入的，最近研究一些新代码的时候，发现并不是这样。于是上网仔细搜了下这方面的知识。
+
+`package.json`这个文件和Node.js的`require`密切相关，它属于Node.js环境本身的一部分。[npm][github_npm]只是一个Node.js模块，运行在Node.js环境之上。
+
+简而言之，在有npm之前，就已经存在`package.json`的使用了。
+
+
+## 关系分析
+
+Node.js的模块系统遵循CommonJS规范。在模块的`package.json`这个文件里，`main`字段指定了加载的入口，默认是模块根目录下的`index.js`。
+
+举个例子，有名为`blah`的包（文件夹），当你进行下面这个操作：
+
+```js
+require('./blah')
+```
+
+默认情况下，它的意思是：
+
+```js
+require('./blah/index.js')
+```
+
+如果在`blah`的package.json里包含这样的内容：
+
+```json
+{ "main": "lib/run.js" }
+```
+
+那么上面那个require的意思就变成了：
+
+```js
+require('./blah/lib/run.js')
+```
+
+
+## 优先级
+
+如果当前目录同时存在`a.js`和`a/`的时候，`require`会怎么处理呢？我们做个实验。
+
+`./a.js`里内容为：
+
+```js
+console.log('require choose a.js')
+```
+
+`./a/index.js`内容为：
+
+```js
+console.log('require choose a/')
+```
+
+现在我们运行：
+
+```js
+require('./a')
+```
+
+得到的输出是：
+
+```
+require choose a.js
+```
+
+删掉`a.js`再重新运行的到：
+
+```
+require choose a/
+```
+
+可见对于模块而言，文件的优先级高于目录。
+
+
+## 延伸
+
+更多关于`package.json`的资料，可以看这里：
+
+<http://javascript.ruanyifeng.com/nodejs/packagejson.html>
+
+CommonJS规范可以看这里：
+
+<http://javascript.ruanyifeng.com/nodejs/module.html>
+
+
+[github_npm]: https://github.com/npm/npm
+
+

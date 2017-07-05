@@ -1,0 +1,35 @@
+# 用exec命令查看Docker容器的内部状态
+2017/02/16 17:17:00
+Docker
+
+
+## 查看容器状态
+
+要查看一个已经启动容器的内部状态，最传统和直观的方法是登陆到容器里，通过ssh或telnet。这种方法有明显的缺陷：需要容器安装并启动sshd或类似的服务程序。不仅笨拙，还会白白消耗计算机资源。
+
+第三方工具如`nsinit`, `nsenter`能达到效果，但它们需要单独安装，麻烦。Docker本身其实提供了相应的子命令可以完成这个任务。
+
+
+## exec命令
+
+Docker的exec命令是非常实用，你可以在宿主机器上，指定需要容器运行的命令，并得到它运行后的标准输出。这个给了我们对容器的完全控制能力。
+
+比如你想知道某个Node.js库的一段代码，只需要像下面这样运行：
+
+```sh
+docker exec CONTAINER_NAME cat node_modules/somelib/index.js
+```
+
+如果你像进行更复杂的操作，可以使用`-it`绑定stdin，并分配tty：
+
+```sh
+docker exec -it CONTAINER_NAME /bin/bash
+```
+
+现在你有了跟ssh方案同等的控制灵活度，而且没有造成不必要的计算机开销。
+
+
+## attach命令
+
+除了`exec`外，Docker还有个`attach`命令，也可以实现类似的效果。不过从`attach`退出会导致整个容器退出，道听途说，没验证过，因为`exec`够好用了。
+

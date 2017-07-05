@@ -1,0 +1,31 @@
+# The Caret And Tilde in NPM's package.json
+2017/06/14 11:31:00
+Node.js
+
+
+We need to specify the version of packages when developing Node.js programs. And sometimes we can't simply use the latest version of the package because of compatibility problem. The NPM has provided a good solution for us.
+
+
+## Semantic Versioning
+
+The NPM version is based on a standard called [Semantic Versioning][semver]. The version is respresented by 3 numbers: *MAJOR*, *MINOR* and *PATCH*.
+
+For example, in the version string "1.2.3", *MAJOR* is "1", *MINOR* is "2", *PATCH* is "3".
+
+And here is the meaning of the 3 numbers:
+
+1. *MAJOR* version when you make incompatible API changes
+2. *MINOR* version when you add functionality in a backwards-compatible manner
+3. *PATCH* version when you make backwards-compatible bug fixes
+
+So, if you want to ensure compatibility and keep up with bug fixes, you need to set these numbers carefully.
+
+
+## Caret and Tilde
+
+If you only want to keep the *PATCH* up to date, you just need to add a "~" before the version string. For example, `~1.2.3` means `>=1.2.3 && <1.3.0`.
+
+If *MAJOR* is the only one that can not be changed, you can use "^". In that way, both *MINOR* and *PATCH* can use the latest version. `^1.2.3` means `>=1.2.3 && <2.0.0`.
+
+[semver]: http://semver.org/spec/v2.0.0.html
+

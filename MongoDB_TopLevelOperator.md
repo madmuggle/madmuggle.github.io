@@ -1,0 +1,85 @@
+# MongoDB的"top level operator"
+2016/12/04 17:01:00
+MongoDB
+
+
+最近开始使用「[Mongo DB][mongohomepage]」，挺顺手。它成为NoSQL的代表之一并不奇怪，不管在易用性上还是功能上，都是很突出的。除此之外，还有商业公司作为坚强的后盾。
+
+但是它有些小地方实在是让人不喜欢。比如查询记录所使用的操作符，有些出乎意料的限制。MongoDB有一个叫做「top level operator」的概念。
+
+
+## $eq
+
+在MongoDB里面，查询记录全用`find`，它的规则很直观，比如要查询所有年龄为2岁的人，你只需要这样写
+
+```js
+db.people.find({ age: 2 })
+```
+
+它等同于
+
+```js
+db.people.find({ age: { $eq: 2 } })
+```
+
+然而下面这种写法，虽然按照语义来理解应该也行，但是却会报错
+
+```js
+db.people.find({ $eq: { age: 2 } })
+//=> "errmsg" : "unknown top level operator: $eq",
+```
+
+因为`$eq`不是「top level operator」，它不能写在最外层。
+
+
+## $in, $or
+
+再看看`$in`这个操作符。比如我们查询所有1岁或者2岁的人，只需要
+
+```js
+db.people.find({ age: { $in: [ 1, 2 ] } })
+```
+
+这种语义其实可以用`$or`来表达，但是你这样写却会报错
+
+```js
+db.people.find({ age: { $or: [ 1, 2 ] } })
+//=> "errmsg" : "unknown operator: $or",
+```
+
+下面的写法同样会报错
+
+```js
+db.people.find({ age: { $or: [ { $eq: 1 }, { $eq: 2 } ] } })
+//=> "errmsg" : "unknown operator: $or",
+```
+
+
+## 答案
+
+如果要用`$or`来做`$in`的事，你只能把`$or`移动到最外面，就像这样
+
+```js
+db.people.find({ $or: [{age: 1}, {age: 2}]})
+```
+
+这是因为`$or`是「top level operator」，只能写在最外层。同样的原因，把`$in`写在最外层也会报错
+
+```js
+db.people.find({ $in: { age: [ 1, 2 ] } })
+//=> "errmsg" : "unknown operator: $or",
+```
+
+因为它和`$eq`一样，不是top level的。
+
+
+## 个人观点
+
+我觉得MongoDB这种做法不太好，这个规则实际上并不是必须的。在用户接口上，规则向来都是越少越好。功能应该建立在良好的正交性之上。
+
+操作符不区分level会减少了大量记忆负担，而且`$in`，`$nin`这类操作符根本就不需要引进，直接用`$or`，`$not`等进行组合就可以了。
+
+何乐而不为呢？
+
+
+[mongohomepage]: https://www.mongodb.com

@@ -1,0 +1,58 @@
+# Markdown链接的写法
+2016/09/19 21:15:00
+Markdown
+
+
+算不上新鲜事，熟悉markdown的人大概早就这样用了，但是我这个业余markdown用户，之前却一把链接和名称写在一起，导致文章看起来很乱。
+
+## 过去的写法
+
+链接：
+
+```markdown
+[blah](http://url.to.this.link/a/b/c/d/e?blah=1)
+```
+
+图片：
+
+```markdown
+![blah](http://url.to.this.link/a/b/c/d/e?blah=1)
+```
+
+## 新发现
+
+后来一次，在查找Python的markdown库，进其主页，发现了一个[链接][markdowndoc]，指向的是markdown的语法介绍。[John Gruber][johngruber]亲自写的。仔细看了下，发现原来还有另外一种写法。
+
+链接：
+
+```markdown
+[blah][id1], now a link will not take too much space.
+...
+[id1]: http://url.to.this.link/a/b/c?blah=1
+```
+
+图片：
+
+```markdown
+![blah][id1]
+...
+[id1]: http://url.to.this.link/a/b/c?blah=1
+```
+
+
+## 特殊情况
+
+有时候希望链接的地址和名字相同，这时就可以使用另一种写法
+
+```markdown
+<http://url.to.this.link>
+```
+
+它等同于
+
+```markdown
+[http://url.to.this.link](http://url.to.this.link)
+```
+
+[markdowndoc]: http://daringfireball.net/projects/markdown/syntax
+[johngruber]: https://en.wikipedia.org/wiki/John_Gruber

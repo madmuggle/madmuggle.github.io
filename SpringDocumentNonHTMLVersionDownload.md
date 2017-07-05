@@ -1,0 +1,24 @@
+# 下载Spring的非HTML版文档
+2017/03/30 14:57:00
+Java, Spring
+
+
+今天在Spring官网找文档下载，不想下载HTML，希望找到PDF版本的。但是找来找去只发现HTML版本的。最后还是在Google上搜到了官网的PDF链接。
+
+其实官网的HTML文档给出了相应的PDF下载链接，只是目录太长，让这个链接被挤到下面，滚了半天页面才能看到。眼拙的我没发现罢了。
+
+相应PDF下载链接所在的页面类似FTP，非常方便直观，索性将链接记录下来，方便以后查看。基本的URL是： <http://docs.spring.io/spring/>
+
+由于页面直观，点几下很容易找到PDF版本的文档：
+
+<http://docs.spring.io/spring/docs/current/spring-framework-reference/pdf/>
+
+顺带下载了个EPUD版本的文档，发现在MacOS上用iBooks看，效果很好，比PDF版本的还要好。EPUD版地址：
+
+<http://docs.spring.io/spring/docs/current/spring-framework-reference/epub/>
+
+通过URL类推，其他相关的文档，比如spring-boot，spring-cloud之类的，也可以这样找到：
+- <http://docs.spring.io/spring-boot/>
+- <http://docs.spring.io/spring-session/>
+- <http://docs.spring.io/spring-cloud/>
+

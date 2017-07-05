@@ -1,0 +1,17 @@
+# The Amazons And The Amazon River
+2017/06/04 19:49:00
+Misc
+
+
+Years ago, the first time I know *Wonder Woman* of DC comics, I was confused by the fact that Diana is an amazon warrior. Does Diana live in South America? I didn't know the connection between Diana and that river in South America, nor did I have the interest to dig out.
+
+Today I watched the movie *Wonder Woman* starring Gal Gadot, it's much better than I have expected. In fact, I think it's much more interesting than Marvel's *Thor*. And I decide to find out why Diana and her family are called Amazon.
+
+As a Chinese, I am not familiar with history of western countries, I guess that's why I didn't know the Amazons before.
+
+[Amazons][wiki_amazons] were a tribe of women warriors in ancient Greek mythology. And ancient Greek ended more than 2000 years ago, while Amazon River was named less than 500 years ago.
+
+So Diana have nothing related to that river in South America, the river was named based on Amazons of Greek mythology.
+
+[wiki_amazons]: https://en.wikipedia.org/wiki/Amazons
+

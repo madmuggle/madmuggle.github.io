@@ -1,0 +1,25 @@
+# ES6的yield*
+2017/02/01 01:25:00
+Javascript
+
+
+## 被忽略的yield*
+
+对于ES6的Generator，我一直自认为非常了解，但有个地方我一直忽略了，今天看koa的源码才注意到，那就是关键字`yield*`。
+
+关于`yield*`的详细信息和具体用法，很多地方都可以找到，比如[这里][mdn]，所以这篇文章就不赘述了。我只想说现在我对于`yield*`的看法。
+
+
+## 没啥用？
+
+如果像`co`那样使用Generator的话，`yield*`就是一个没啥用的累赘。
+
+它当让不会是完全没用的，只是用在控制异步流程上不合适：没带来什么好处，还让事情变得复杂。不然ES7就会有一个`await*`。
+
+然而Generator和Async/Await不同，它只是提供了一个通用的东西，这个东西可以被用在异步流程控制上，如同async/await，但并不仅限于这里。
+
+然而我并不知道哪个地方可以用到Generator这个特性，所以这里留个地儿，以后有新发现就补在这里吧。
+
+
+[mdn]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield*
+

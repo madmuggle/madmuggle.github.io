@@ -1,0 +1,44 @@
+# 使用Git进行自动化部署
+2016/11/01 20:10:00
+Network
+
+
+之前一段时间使用Pages服务，进行部署的时候非常方便，直接push就行了。今天发现使用git本身的功能就能实现这种效果，不需要额外的代码。关键在于git的「hooks」功能。
+
+网上有很多资料，我整理出了关键的几步，去掉了一些不必要的信息。这篇博客只讲步骤，算是与其他指南一个互补吧。
+
+
+## 配置只在服务器上
+
+假设所有的操作均在服务器的`$HOME`下进行。其他目录当然也可以，只是你需要同时修改下面的一些命令。
+
+第一步，创建一个repository。必须使用`--bare`
+
+```sh
+git init --bare repo
+```
+
+第二步，往`./repo/hooks/post-receive`这个文件里面添加如下内容
+
+```sh
+unset GIT_DIR # This is important !
+cd /my/path/to/webroot
+rm -r *
+rm -rf .git
+git init
+git pull ~/repo master
+```
+
+配置结束。
+
+接下来，你只需要在本地push网站到`repo`，就能自动部署到刚才指定的网站目录了。
+
+```sh
+git push blah@a.b.c.org:~/repo master
+```
+
+## 关于密码
+
+往自己创建的git repository进行push的时候，需要输入密码，不如往github推送方便，其实只需要进行一点设置：把自己的公钥文件拷贝到服务器的`~/.ssh/authorized_keys`就行了。
+
+它还会导致的另外一个结果：你用ssh登录服务器的时候不需要密码了。

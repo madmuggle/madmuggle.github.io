@@ -1,0 +1,107 @@
+# 实例探索“CORS”
+2016/11/23 21:08:00
+Javascript
+
+
+第一次接触CORS（Cross-Origin Resource Sharing），是因为[CouchDB][couchdb]。发现CouchDB可以配合一个静态HTTP服务器，直接创建Web应用时，我激动了好一阵子。而这种做法之所以可行，背后的大英雄就是CORS。
+
+关于CORS，网上有很多资料，比如[这里][mozilladoc]。本文不是介绍CORS的细节，而是做一个简单的实验，亲自感受CORS。
+
+
+## 浏览器的提示
+
+首先，浏览器会对服务器的响应进行检查。对于一个没有进行特殊设置的服务器，浏览器会禁止你跨域访问它。
+
+所以关于「跨域」，你需要知道的第一件事就是：*是浏览器在管束你，而不是服务器在拒绝你*。
+
+当你进行非法的跨域访问时，浏览器给出的错误提示大概会是这样的：
+
+> Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at http://localhost:3000/. (Reason: CORS header ‘Access-Control-Allow-Origin’ does not match ‘http://madmuggle.me’).
+
+要进行合法的跨域访问，需要服务器主动配合，在返回给浏览器的HTTP头里，加上几个特殊的字段。
+
+
+## 简单的测试服务器
+
+这是我们的服务程序，基于[koajs][koajs]，我们将在其他的网页上访问这个服务，只要能够达到跨域的效果就行。我将在我的网站上做实验，所以服务器端程序如下
+
+```javascript
+var koa = require('koa')
+var app = koa()
+
+app.use(function* () {
+  this.set('Access-Control-Allow-Methods', 'GET, PUT, POST')
+  this.set('Access-Control-Allow-Origin', 'http://madmuggle.me')
+  this.body = 'hello!'
+})
+
+app.listen(3000)
+```
+
+
+## 发点请求
+
+为了简洁，我们用`fetch`来发请求。如果你使用Safari，得用回`XMLHttpRequest`，虽然麻烦点，但是同样可以完成实验。
+
+打开浏览器的开发者工具，直接在console里运行
+
+```javascript
+fetch('http://localhost:3000')
+.then(r => r.text().then(console.log))
+.catch(console.error)
+```
+
+轻松得到了结果！这在以前简直不敢想
+
+```
+hello!
+```
+
+再来发个POST请求看看
+
+```javascript
+fetch('http://localhost:3000', { method: 'POST' })
+.then(r => r.text().then(console.log))
+.catch(console.error)
+```
+
+依然可行
+
+```
+hello!
+```
+
+
+## OPTIONS
+
+我们索性尝试下别的，比如发个PUT请求
+
+```javascript
+fetch('http://localhost:3000', { method: 'PUT' })
+.then(r => r.text().then(console.log))
+.catch(console.error)
+```
+
+输出没什么不同
+
+```
+hello!
+```
+
+但是你查看HTTP请求，就会发现这次与之前的GET和POST不同：在发送真正的PUT请求之前，先发送了一个OPTIONS请求。
+
+这个OPTIONS请求被称为`Preflighted requests`。是用以确定服务器所支持的请求类型。
+
+只要你发送的请求不是`HEAD`, `GET`或者`POST`，浏览器就会在真正的请求之前，先发送OPTIONS请求。
+
+
+## 只是开始
+
+关于CORS其实有很多技术细节需要注意，比如cookie，Content-Type…… 这些可以等到用的时候再去研究。
+
+总之它的出现，给了我们更多的可能！
+
+
+[mozilladoc]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS
+[couchdb]: http://couchdb.apache.org/
+[koajs]: http://koajs.com/

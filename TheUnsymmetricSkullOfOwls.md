@@ -1,0 +1,20 @@
+# The Unsymmetric Skull Of Owls
+2017/06/13 10:29:00
+Misc
+
+
+Owls are one of the most beautiful birds in the world. Big head, big eyes, tiny mouth(looks tiny), small and fluffy body, owls look cute and adorable, despite the fact that they are actually cold-blood predators.
+
+But unlike other birds, owls have unsymmetric heads. Some of them even have unsymmetric skulls! That's strange, because owls looks symmetric at first glance. The feathers are deceptive.
+
+The unsymmetry give owls highly developed auditory system. You can find a more specific explanation with pictures on [this site][info].
+
+If someone have unsymmetric ears, he probably has a sense of inferiority. But every owls have unsymmetric ears, and that's why they have super power on hearing. I bet owls are proud of their unsymmetric ears.
+
+Maybe we should reconsider the value of symmetry.
+
+Creatures are not born to be symmetric. Being symmetric is just a way to get survived. A symmetric body is a balanced body, which leads to faster movements. But if there are other options to get survived, it's okay to be unsymmetric.
+
+
+[info]: http://www.owlpages.com/owls/articles.php?a=6
+

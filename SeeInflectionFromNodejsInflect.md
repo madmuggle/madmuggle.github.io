@@ -1,0 +1,74 @@
+# 从Node.js的inflect库看“词形变化”
+2017/02/13 18:37:00
+Misc, Javascript
+
+
+## Inflection
+
+词形变化，更准确地讲应该是“屈折变化”(inflection)，是英语学习过程中，规律性较差，死记成分较多的一块。说实话，到现在我都只会转换一些常用的词。
+
+所谓inflection，就是同一个词，在使用的情景不一样的时候，比如性别，数量，时间等不同时，会有不同的写法。详细介绍可见[wiki][wiki]。
+
+
+## inflect库
+
+最近发现Node.js有一个[库][npm]用来进行这类词语转换。这个库的名字取得特别简便，只有一个小写的`i`。它的用法也非常简单。
+
+```js
+var inflect = require('i')()
+```
+
+像上面这样引入这个库之后，就可以方便地使用它了。我们跳过简单的转换，如加`s`等，直接用复杂的变化来测试它：
+
+单数形式变复数形式：
+
+```js
+inflect.pluralize('people')
+//=> 'person'
+```
+
+复数形式变单数形式：
+
+```js
+inflect.pluralize('octopus')
+//=> 'octopi'
+```
+
+这种无规律的转换都能正常进行，要么是使用了我所不了解的英语规则，要么就是有一个表，照着替换。于是我查看了这个库的[源码][github]。
+
+
+## 源码分析
+
+这个库的结构比较简单，点开第一个源码文件`defaults.js`，问题的答案就已经知晓了，作者手写的正则对每个特殊情况都进行了处理。
+
+比如对于`octopus`，起作用的是下面的这段程序：
+
+```js
+inflect.plural(/(octop|vir)us$/i, '$1i')
+```
+
+对于`bus`则是：
+
+```js
+inflect.plural(/(bu)s$/i, '$1ses')
+```
+
+而对于`man`，`cow`这种更没规律的，则是
+
+```js
+inflect.irregular('man', 'men')
+```
+
+```js
+inflect.irregular('cow', 'kine')
+```
+
+有点小失望，没有想象中的英语黑魔法。或许根本就不存在捷径，只能死记吧。
+
+同时也认识到这个库不能随便用，它可能会严重影响性能。除了用户交互部分对输入纠错，我暂时想不出合适的用途。
+
+
+[wiki]: https://en.wikipedia.org/wiki/Inflection
+[npm]: https://www.npmjs.com/package/i
+[github]: https://github.com/pksunkara/inflect
+

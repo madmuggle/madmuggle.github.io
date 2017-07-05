@@ -1,0 +1,14 @@
+# Stop Writing For A While
+2017/07/28 19:52:27
+Misc
+
+
+## Maybe Web Development Is Not What I Want
+
+I haven't update my blog for weeks. There are two reasons: 1. The working stuff was busy before, they took me too much time. 2. I got something more important to do in my spare time.
+
+I have been working as a web developer for more than one year, and finally I find it will not be my career. I love computer programming, it's interesting, awesome, and can bring me money. Web development can only give me the last one.
+
+To change my life, I need to spend all my spare time to learn some more advanced or fundamental techniques. So I will stop writting these blogs for a while.
+
+

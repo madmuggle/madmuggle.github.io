@@ -1,0 +1,27 @@
+# 终端LED时钟的Python版本
+2016/10/25 20:55:00
+Python, Linux
+
+
+[前一篇文章][TermClock_C_link]是用C写的一个终端时钟，之后我又用Python写了一个，基本上功能是一样的，但是不支持颜色。如果你想让它支持颜色应该只需要改动一点点代码。
+又一次纯粹觉得好玩。虽然现在我也想不起来去年是觉得哪里好玩～
+
+还是放在了[Github][TermClock_Python_Github]上。
+
+
+## 3个版本
+
+我写了3个Python版本的clock，使用的算法是一模一样的，只是编码风格的改变。
+
+`clock1.py`是最初的版本，用了很多全局变量，感觉挺乱，于是有了`clock2.py`。
+
+`clock2.py`这个版本解决了全局变量的问题，但是却写成了一个巨大的类里面带很多方法的形式。我特别不喜欢这种代码，于是有了`clock3.py`。
+
+`clock3.py`跟`clock2.py`差不多，只不过把所有的方法移到了外面。然后通过Python的一些特性最后把它们加到类里面，从而形式上减小了类。保证了大多数函数都是于类无关的。然而实质上并没有什么好处，函数并没有真正的“函数式”化。
+
+是的，的确没啥意义。
+
+
+[TermClock_C_link]: /articles/TermClock_C.html
+[TermClock_Python_Github]: https://github.com/madmuggle/TermClock_Python
+

@@ -1,0 +1,60 @@
+# 有趣的“Thunk”
+2016/11/24 13:35:00
+Javascript
+
+
+我开始深度使用Javascript的时候，Promise已经普及，Generator，Async等也早就进入了人们的视线。这些耀眼的新特性吸引了我所有的注意力，让我忽视了Thunk，这个精巧的玩具。
+
+由于工作需要，接触了SuperAgent这个库。看第一眼时我以为它使用了Promise，但细看发现不是。顶多在某些地方用了相似的技术。
+
+我想起了之前偶尔在论坛和博客里瞥到的`Thunk`，就去搜这个词，发现SuperAgent那个不是Thunk。同时也发现，Thunk是个非常可爱的小东西。
+
+
+## 简单而巧妙
+
+实现一个基本的Promise需要[上百行代码][promise]，而实现一个Thunk转换器，只要[二十多行][thunkify]。甚至在[这篇文章][ryfthunk]里用10行就实现了核心。
+
+我用ES6的语法整理下，只剩下6行了
+
+```js
+function toThunk(fn) {
+  return function() {
+    var args = Array.from(arguments)
+    return callback => fn.apply(this, args.concat([callback]))
+  }
+}
+```
+
+
+## 方便
+
+Thunk不仅实现起来简单，使用起来更是方便。用它转换一下回调版本的`readFile`
+
+```js
+var readFile = toThunk(fs.readFile)
+```
+
+行了！然后你就可以这么用了
+
+```js
+readFile('./a.txt', 'utf-8')(console.log)
+```
+
+
+## 规范的贡献
+
+当然这也不光是Thunk的功劳。Node.js标准库的异步函数，回调函数都是作为最后一个参数出现，这是另一个基础条件。
+
+实际上回调函数作为第一个参数也是可以的，关键在于位置一定要固定。
+
+
+## 巨大的潜力
+
+Thunk经过复杂的变换，甚至可以在功能上覆盖掉Promise，证据就是[这个库][thunks]。然而就实现上而言，这个库比一般的Promise要复杂。
+
+
+
+[promise]: https://github.com/madmuggle/SimplePromise
+[thunkify]: https://github.com/tj/node-thunkify/blob/master/index.js
+[thunks]: https://github.com/thunks/thunks
+[ryfthunk]: http://www.ruanyifeng.com/blog/2015/05/thunk.html

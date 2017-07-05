@@ -1,0 +1,34 @@
+# 英文名的昵称
+2017/02/20 13:25:00
+Misc
+
+
+## Gotham的疑问
+
+上个周末把美剧[Gotham][gothamtv]的第一季后半，第二季整部，和第三季前半看完了，剩下的似乎下下个月才继续更新。很精彩，看得停不下来的那种剧。
+
+前天写博客查了下名字，发现写的是“James Gordon”。当时没想到，今天才意识过来，不是Jim吗？怎么写的是James？
+
+于是在Wiki上搜James，还真找到了[原因][james]。
+
+
+## Diminutives
+
+James这个名字比较特殊，它有相当多的[Diminutive][diminutive]，即“昵称”。James相关的Wikipedia原文有这样一句话：
+> Diminutives include Jim, Jimmy, Jimmie, Jamie, Jimbo and others.
+
+这不仅解决了我关于“James”和“Jim”的问题，顺带还知道了为什么Barbara会喊“Jimbo”，原来不是她自己的“个性叫法”。
+
+出于好奇，我又查了下其他的名字，比如[Bruce][bruce]，发现它没有昵称，至少Wiki上没写。[Alfred][alfred]也没有昵称。
+
+不知道昵称的有无是否有规律可循呢？跟词的来源会不会有关系？
+
+还是说它的产生是个随机事件？
+
+
+[gothamtv]: https://en.wikipedia.org/wiki/Gotham_(TV_series)
+[james]: https://en.wikipedia.org/wiki/James_(name)
+[bruce]: https://en.wikipedia.org/wiki/Bruce
+[alfred]: https://en.wikipedia.org/wiki/Alfred_(name)
+[diminutive]: http://cn.bing.com/dict/search?q=diminutives
+

@@ -1,0 +1,50 @@
+# Generate Binary For Different Architecture And OS
+2017/06/09 00:25:00
+Go
+
+
+## Why Cross compiler?
+
+Usually, compilers will generate executable binary files for the running operating system. For example, a C compiler running on Linux will generate a executable files that can run on Linux.
+
+But sometimes, you want to generating binary executables for different platform. And compilers who do this special job is called [Cross compiler][wikicrosscompiler].
+
+People who develop [Embedded systems][wikiembeddedsystem] use cross compiler everyday, because those tiny computers are too simple to run compilers for themselves. So they compile the code on their PC, and upload the machine codes to the target devices.
+
+People who develop web services also need cross compilers. If your laptop is Macbook, and your server is Linux, you will need a cross compiler. Or you will have to install compiler on your server, and compile the code on your server.
+
+Of course you can use platforms like Java or Python, who base on multiple platform VMs. But sometimes you need to use native code, so you have to use C/C++ or Go, then you will need cross compilers.
+
+
+## C Cross Compiler
+
+It's not convenient to do cross compiling with C compilers. The pre-installed C compilers are all made for building executables for the running system. You have to download and install another suite of toolchain to compile your code for another platform.
+
+In short, the number of compilers you need to install is same as the number of platforms you want to support.
+
+That works fine, if we don't know Go. Once you developed some programs with Go toolchain, you will feel it's horrible to do cross compiling with C/C++ toolchains.
+
+Why? Becuase with Go, you can use one suite of toolchain to compile codes for every platforms. All you need to do is downloading the standard Go binary from it's official site.
+
+
+## Go Cross Compiler
+
+For example, my laptop is darwin, and I want to compile code for linux that runs on arm devices. All I have to do is changed some environment variables before running `go build`. Just like this:
+
+```sh
+GOOS=linux GOARCH=arm go build myfile.go
+```
+
+Building code for a Linux server that runs on arm64, which is same as Macbook, is even simpler:
+
+```sh
+GOOS=linux go build myfile.go
+```
+
+It's so convenient that I don't want to use C compilers anymore.
+
+
+
+[wikicrosscompiler]: https://en.wikipedia.org/wiki/Cross_compiler
+[wikiembeddedsystem]: https://en.wikipedia.org/wiki/Embedded_system
+
