@@ -116,4 +116,4 @@ myobj.val
 #=> 4
 ```
 
-[article]: /articles/WeirdMethodDefinition.html
+[article]: /WeirdMethodDefinition.html

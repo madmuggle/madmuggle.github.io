@@ -42,4 +42,4 @@ class Test {
 貌似Python里面也是这么做的，不过Python有「类」的概念，所以直接作为「类对象」的属性，而不是构造函数的属性。
 
 
-[prev]: /articles/WeirdMethodDefinition.html
+[prev]: /WeirdMethodDefinition.html

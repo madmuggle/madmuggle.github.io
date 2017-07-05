@@ -65,5 +65,5 @@ function exec(genFn) {
 Have fun.
 
 
-[GeneratorExecutorThunk]: /articles/GeneratorExecutorThunk.html
+[GeneratorExecutorThunk]: /GeneratorExecutorThunk.html
 [co]: https://github.com/tj/co/blob/master/index.js

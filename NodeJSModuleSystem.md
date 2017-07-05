@@ -40,6 +40,6 @@ require('./a')
 很喜欢Node.js这种做法，在不增加语言特性的情况下，就实现了模块系统，干净利落。
 
 
-[require]: /articles/NodeJSRequire.html
-[package]: /articles/PackageJsonAndNpm.html
-[promise]: /articles/ES6_Promise.html
+[require]: /NodeJSRequire.html
+[package]: /PackageJsonAndNpm.html
+[promise]: /ES6_Promise.html

@@ -67,5 +67,5 @@ a
 我觉得这是种比较舒服的做法。
 
 
-[v8]: /articles/V8ArraySortBug.html
+[v8]: /V8ArraySortBug.html
 [sort]: http://www.ruanyifeng.com/blog/2011/04/quicksort_in_javascript.html

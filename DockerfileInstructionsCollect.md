@@ -148,5 +148,5 @@ LABEL m.l1="v1" m.l2="v2" other="v3"
 
 
 [doc]: https://docs.docker.com/engine/reference/builder/
-[prev]: /articles/DockerfileInstructions.html
+[prev]: /DockerfileInstructions.html
 

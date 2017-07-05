@@ -62,5 +62,5 @@ exec(function* () {
 结果同预料的一样。
 
 
-[MaybePromiseIsEnough]: /articles/MaybePromiseIsEnough.html
-[Thunk]: /articles/Thunk.html
+[MaybePromiseIsEnough]: /MaybePromiseIsEnough.html
+[Thunk]: /Thunk.html

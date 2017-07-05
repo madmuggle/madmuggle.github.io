@@ -42,5 +42,5 @@ uintptr(x) + 1
 Caution, the argument `x` of `uintptr` have to be an `unsafe.Pointer`. You can't calculate normal pointers.
 
 
-[prevblog]: /articles/GoFullFunctionPointer.html
+[prevblog]: /GoFullFunctionPointer.html
 

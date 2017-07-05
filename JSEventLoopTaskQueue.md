@@ -14,5 +14,5 @@ Javascript
 - <https://nodejs.org/api/process.html>
 
 
-[jsmcu]: /articles/JSCallbackIsNotMCUInterrupt.html
+[jsmcu]: /JSCallbackIsNotMCUInterrupt.html
 

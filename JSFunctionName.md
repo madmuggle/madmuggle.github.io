@@ -45,4 +45,4 @@ somefunc(function myfun() {
 
 它多半是故意这样做，可能需要用函数的名字去注册什么服务，或仅仅是做个记录。
 
-[jsmethod]: /articles/WeirdMethodDefinition.html
+[jsmethod]: /WeirdMethodDefinition.html

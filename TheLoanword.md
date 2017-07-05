@@ -40,5 +40,5 @@ Misc
 [jessica]: http://www.imdb.com/title/tt2357547/
 [a2]: http://www.imdb.com/title/tt1843866/
 [zhihu]: https://www.zhihu.com/question/24173240
-[prevarticle]: /articles/AmericanEnglishPronunciationBetter.html
+[prevarticle]: /AmericanEnglishPronunciationBetter.html
 

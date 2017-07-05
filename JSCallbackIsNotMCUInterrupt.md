@@ -83,4 +83,4 @@ JS的「回调」和「MCU的中断」，是不能等同的，它们有一些相
 
 至于Javascript为什么是这个样子，这跟Javascript的`Event Loop`和`task queue`有关了，但那是另外一个主题（如果感兴趣，请看[另一篇博客][eventloop]），这篇文章只是纠正一下过去自以为很棒的比喻。
 
-[eventloop]: /articles/JSEventLoopTaskQueue.html
+[eventloop]: /JSEventLoopTaskQueue.html

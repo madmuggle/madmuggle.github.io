@@ -84,6 +84,6 @@ Thunk最终也卡在了Promise一样的问题上。而Promise由于之前已经�
 所以没有谁好过谁。多么无聊的结论。
 
 
-[Thunk]: /articles/Thunk.html
-[gePromise]: /articles/GeneratorExecutorPromise.html
-[geThunk]: /articles/GeneratorExecutorThunk.html
+[Thunk]: /Thunk.html
+[gePromise]: /GeneratorExecutorPromise.html
+[geThunk]: /GeneratorExecutorThunk.html

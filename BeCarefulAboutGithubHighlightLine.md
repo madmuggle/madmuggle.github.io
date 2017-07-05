@@ -19,5 +19,5 @@ Misc
 我决定还是直接把代码写在文章里。
 
 
-[prevblog]: /articles/GithubSkills.html
+[prevblog]: /GithubSkills.html
 

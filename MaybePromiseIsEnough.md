@@ -136,5 +136,5 @@ co(test4)
 最主要的是自从读懂了`co`的源码之后，对它的排斥心里慢慢就消散了。
 
 
-[ES6_Promise]: /articles/ES6_Promise.html
+[ES6_Promise]: /ES6_Promise.html
 [uncanny_valley]: https://en.wikipedia.org/wiki/Uncanny_valley

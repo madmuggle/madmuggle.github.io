@@ -34,5 +34,5 @@ Misc
 那时候就不用瞎造语言来阐述这篇文章的观点了。
 
 
-[prev]: /articles/IdeogramAndPhonogram.html
+[prev]: /IdeogramAndPhonogram.html
 

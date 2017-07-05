@@ -39,5 +39,5 @@ Misc, Web
 看上去一点不酷，但反而能让我更加注意内容的价值。没准是件好事～
 
 
-[prevBlog]: /articles/WhyGithubPages.html
-[show]: /articles/ChromeLimitSpeed.html
+[prevBlog]: /WhyGithubPages.html
+[show]: /ChromeLimitSpeed.html

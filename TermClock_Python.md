@@ -22,6 +22,6 @@ Python, Linux
 是的，的确没啥意义。
 
 
-[TermClock_C_link]: /articles/TermClock_C.html
+[TermClock_C_link]: /TermClock_C.html
 [TermClock_Python_Github]: https://github.com/madmuggle/TermClock_Python
 

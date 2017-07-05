@@ -263,4 +263,4 @@ co(function* () {
 [rabbitmq]: http://www.rabbitmq.com/
 [amqp]: https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol
 [rabbitmqclient]: http://www.rabbitmq.com/clients.html
-[promise]: /articles/ES6_Promise.html
+[promise]: /ES6_Promise.html

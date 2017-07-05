@@ -19,6 +19,6 @@ HTML, Javascript
 
 进一步的细节从我的那个demo里可以了解到。那个demo最大的优点是没有使用任何第三方库，代码量超小，容易看清主要逻辑。
 
-[old]: /articles/HTML5HistoryHash.html
+[old]: /HTML5HistoryHash.html
 [demo]: https://github.com/madmuggle/SimpleSPARoute
 

@@ -94,4 +94,4 @@ fetchDataFrom(myServer)
 "Then write to my file"
 
 
-[thunkandpromise]: /articles/ThunkAndPromise.html
+[thunkandpromise]: /ThunkAndPromise.html
