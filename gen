@@ -1,5 +1,5 @@
 #! /bin/bash
 
-for f in $(find . -name '*.md')
+for f in $(find ./blogs -name '*.md')
 do echo "- [$(head -n1 $f | cut -c3-)]($(echo $f | cut -c2-))"
 done
