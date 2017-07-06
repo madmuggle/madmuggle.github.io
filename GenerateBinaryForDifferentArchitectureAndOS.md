@@ -1,6 +1,5 @@
 # Generate Binary For Different Architecture And OS
 2017/06/09 00:25:00
-Go
 
 
 ## Why Cross compiler?

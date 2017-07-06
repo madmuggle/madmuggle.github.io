@@ -1,6 +1,5 @@
 # Poisonous And Venomous
 2017/05/31 21:39:00
-Misc
 
 
 ## The Missing Concept
@@ -11,7 +10,7 @@ Some of you may not be able to access quora, I don't know why, but I failed help
 
 So I made a screenshot on that answer.
 
-![](/img/PoisonousAndVenomous.jpeg)
+![screen shot of the quora page](/img/PoisonousAndVenomous.jpeg)
 
 I suddenly realize that I had no concepts on *poisonous* and *venomous* before. If you asked me on that theme yesterday, I probably would tell you that "*red mushrooms are poisonous*" and "*snakes are poisonous*".
 

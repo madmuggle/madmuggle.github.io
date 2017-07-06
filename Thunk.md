@@ -1,6 +1,5 @@
 # 有趣的“Thunk”
 2016/11/24 13:35:00
-Javascript
 
 
 我开始深度使用Javascript的时候，Promise已经普及，Generator，Async等也早就进入了人们的视线。这些耀眼的新特性吸引了我所有的注意力，让我忽视了Thunk，这个精巧的玩具。

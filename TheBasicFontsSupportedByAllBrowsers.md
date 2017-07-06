@@ -1,6 +1,5 @@
 # The Basic Fonts Supported By All Browsers
 2017/05/23 10:13:00
-Misc
 
 
 ## The Five Basic Fonts

@@ -1,6 +1,5 @@
 # 实现MaterialUI输入框的动画效果
 2016/12/16 18:21:00
-HTML, CSS, Javascript
 
 
 ## 漂亮的输入框动画

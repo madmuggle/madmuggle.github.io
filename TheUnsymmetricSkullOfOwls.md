@@ -1,6 +1,5 @@
 # The Unsymmetric Skull Of Owls
 2017/06/13 10:29:00
-Misc
 
 
 Owls are one of the most beautiful birds in the world. Big head, big eyes, tiny mouth(looks tiny), small and fluffy body, owls look cute and adorable, despite the fact that they are actually cold-blood predators.

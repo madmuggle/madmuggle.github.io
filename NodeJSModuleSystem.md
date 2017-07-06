@@ -1,6 +1,5 @@
 # Node.js的模块系统
 2017/02/23 16:14:00
-Javascript
 
 
 ## Implementation

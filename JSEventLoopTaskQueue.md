@@ -1,6 +1,5 @@
 # JS的Event Loop和Task Queue
 2016/11/21 13:18:00
-Javascript
 
 
 之前有[一篇博客][jsmcu]提到了JS的`Event Loop`和`Task Queue`，但是没有展开。这篇博客原本是准备展开那个主题，但是写着写着我意识到，我现在并没有能力把这个讲透彻，因为并没有看过`V8`或者`LibUV`的源码。写出的观点也只能是某种「猜测」。

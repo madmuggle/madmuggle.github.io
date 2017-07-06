@@ -1,6 +1,5 @@
 # What If We Just Write Phonetic Symbol ?
 2017/05/20 00:19:00
-Misc
 
 
 ## The Incompetent Phonogram

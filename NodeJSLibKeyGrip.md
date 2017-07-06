@@ -1,6 +1,5 @@
 # NodeJS的Keygrip库
 2017/04/07 12:45:00
-Node.js
 
 
 今天看Koa相关的源码，发现了[keygrip][keygrip-github]这个库，用来处理HTTP cookie。这样做的主要目的大概是为了安全，但具体是如何达到安全的效果，我还没搞清楚。

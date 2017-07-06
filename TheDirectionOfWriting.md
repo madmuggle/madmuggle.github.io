@@ -1,6 +1,5 @@
 # The Direction Of Writting
 2017/05/16 18:47:00
-Misc
 
 
 ## Ordinary: Left to Right

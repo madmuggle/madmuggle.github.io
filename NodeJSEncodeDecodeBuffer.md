@@ -1,6 +1,5 @@
 # Node.js的编码解码与Buffer
 2017/02/24 14:32:00
-Javascript
 
 
 ## 加密也是编码

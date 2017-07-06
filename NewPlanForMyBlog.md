@@ -1,6 +1,5 @@
 # New Plan for My Personal Blog
 2017/05/16 14:53:00
-Misc
 
 
 ## The Past Monthes

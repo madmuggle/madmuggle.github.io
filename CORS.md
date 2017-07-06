@@ -1,6 +1,5 @@
 # 实例探索“CORS”
 2016/11/23 21:08:00
-Javascript
 
 
 第一次接触CORS（Cross-Origin Resource Sharing），是因为[CouchDB][couchdb]。发现CouchDB可以配合一个静态HTTP服务器，直接创建Web应用时，我激动了好一阵子。而这种做法之所以可行，背后的大英雄就是CORS。

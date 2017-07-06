@@ -1,6 +1,5 @@
 # Stop Writing For A While
 2017/07/28 19:52:27
-Misc
 
 
 ## Maybe Web Development Is Not What I Want

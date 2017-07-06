@@ -1,6 +1,5 @@
 # HTML5的history
 2016/11/17 18:32:00
-HTML, Javascript
 
 
 ## Hash是唯一的选择吗？

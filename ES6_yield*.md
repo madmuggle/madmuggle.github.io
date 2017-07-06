@@ -1,6 +1,5 @@
 # ES6的yield*
 2017/02/01 01:25:00
-Javascript
 
 
 ## 被忽略的yield*

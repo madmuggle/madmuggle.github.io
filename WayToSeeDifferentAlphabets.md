@@ -1,6 +1,5 @@
 # A Good Way To See Different Alphabets
 2017/05/31 13:40:00
-Misc
 
 
 ## Ubuntu Alphabet Test

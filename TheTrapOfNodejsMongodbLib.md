@@ -1,6 +1,5 @@
 # The Trap Of Node.js Mongodb Library
 2017/05/22 16:38:00
-Node.js MongoDB
 
 
 ## MongoDB and Javascript

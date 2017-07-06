@@ -1,6 +1,5 @@
 # Semi, Demi, Hemi
 2017/05/21 01:00:00
-Misc
 
 
 ## Semicolon & Demigod

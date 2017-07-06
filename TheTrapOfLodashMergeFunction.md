@@ -1,6 +1,5 @@
 # The Trap Of Lodash's merge Function
 2017/06/14 19:26:00
-Javascript
 
 
 The Javascript's built-in function `Object.assign` can do shallow copy, but sometimes we just need deep copy, so we need to write a merge function ourselves, or use 3rd party librariy like [lodash][lodash].

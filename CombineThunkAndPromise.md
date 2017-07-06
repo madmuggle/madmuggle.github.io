@@ -1,6 +1,5 @@
 # 巧用Thunk和Proimse
 2016/12/18 23:15:00
-Javascript
 
 
 ## 意料之外的组合效果

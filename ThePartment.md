@@ -1,6 +1,5 @@
 # The "partment" Thing
 2017/05/23 23:52:00
-Misc
 
 
 ## The Common Part

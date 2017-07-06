@@ -1,6 +1,5 @@
 # Why You Should Always use RFC3339
 2017/06/09 14:43:00
-Misc
 
 
 Sometimes we need to use string of characters to represent time. And we have many standard choices right now. But I think we should always use [RFC3339][rfc3339](or [ISO8601][iso8601], same thing).

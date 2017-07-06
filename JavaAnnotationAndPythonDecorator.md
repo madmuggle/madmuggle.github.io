@@ -1,6 +1,5 @@
 # Java的Annotation和Python的Decorator
 2017/03/20 16:25:00
-Java, Python
 
 
 ## 一样？天差地别！

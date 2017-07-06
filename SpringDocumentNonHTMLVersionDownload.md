@@ -1,6 +1,5 @@
 # 下载Spring的非HTML版文档
 2017/03/30 14:57:00
-Java, Spring
 
 
 今天在Spring官网找文档下载，不想下载HTML，希望找到PDF版本的。但是找来找去只发现HTML版本的。最后还是在Google上搜到了官网的PDF链接。

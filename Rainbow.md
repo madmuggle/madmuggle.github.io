@@ -1,6 +1,5 @@
 # 语法高亮插件rainbow
 2016/09/28 11:23:00
-HTML, CSS, Javascript
 
 HTML的代码高亮插件有很多，都是用JS解析文本，然后替换成DOM来达到高亮效果。对比了一番，觉得还是「[rainbow][rainbow_homepage]」这款最合我胃口。
 

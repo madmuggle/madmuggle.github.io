@@ -1,6 +1,5 @@
 # package.json并不是npm的一部分
 2017/01/17 12:18:00
-Javascript
 
 
 ## 长时间的误解

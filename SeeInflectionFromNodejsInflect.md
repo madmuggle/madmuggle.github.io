@@ -1,6 +1,5 @@
 # 从Node.js的inflect库看“词形变化”
 2017/02/13 18:37:00
-Misc, Javascript
 
 
 ## Inflection

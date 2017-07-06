@@ -1,6 +1,5 @@
 # The Suffix "ish"
 2017/06/02 14:43:00
-Misc
 
 
 ## Adjective with ish

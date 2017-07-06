@@ -1,6 +1,5 @@
 # Dockerfile指令：ENTRYPOINT&CMD, COPY&ADD
 2017/02/06 14:32:00
-Docker
 
 
 ## ENTRYPOINT & CMD

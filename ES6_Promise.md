@@ -1,6 +1,5 @@
 # 自己动手实现ES6 Promise
 2016/10/27 13:10:00
-Javascript
 
 
 ## 为什么要自己实现Promise ？

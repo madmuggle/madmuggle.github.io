@@ -1,6 +1,5 @@
 # 不用把OPTIONS写在Access-Control-Allow-Methods里
 2017/04/07 16:56:00
-HTTP
 
 
 之前在回复跨域请求的时候，总是习惯直接把Access-Control-Allow-Methods这个HTTP头设置成：'GET,POST,OPTIONS'。今天发现这样不仅不必要，逻辑上讲还有点搞笑。

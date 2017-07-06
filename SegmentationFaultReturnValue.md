@@ -1,6 +1,5 @@
 # Segmentation Fault时，进程的返回值
 2017/01/28 01:15:00
-Linux
 
 
 ## 进程的返回值

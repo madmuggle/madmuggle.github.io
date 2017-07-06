@@ -1,6 +1,5 @@
 # Go Language Skill: unsafe.Pointer & uintptr
 2017/06/09 13:49:00
-Go
 
 
 ## Better Examples

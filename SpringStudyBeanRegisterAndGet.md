@@ -1,6 +1,5 @@
 # Spring初学笔记：bean的创建与获取
 2017/03/31 10:12:00
-Java, Spring
 
 
 ## 开始学习Spring

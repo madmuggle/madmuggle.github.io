@@ -1,6 +1,5 @@
 # The Difference Between Crocodiles And Alligators
 2017/05/31 11:28:00
-Misc
 
 
 Crocodile, the reptile with long jaw who is powerful and beautiful, is probably the favorite animal for many boys. Sometimes you can see a picture of a crocodile with the word *alligator*. Does crocodile have more than one name? Is that the *latin name* or something for crocodile?
