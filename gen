@@ -1,8 +1,5 @@
 #! /bin/bash
 
 for f in $(find ./blogs -name '*.md' | sort -r)
-do
-	title=$(head -n1 $f | cut -c3-)
-	url=$(echo $f | sed 's#.\(/blogs/.*\)\.md$#\1.html#')
-	echo "- [$title]($url)"
+do echo "- [$(head -n1 $f | cut -c3-)]($(echo $f | sed 's#.\(/blogs/.*\)\.md$#\1.html#'))"
 done
