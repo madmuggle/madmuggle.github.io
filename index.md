@@ -1,4 +1,4 @@
-- [Some Tips On Configuring A Newly Install Debian](/blogs/2017/07/08/12.46.html)
+- [Tips On Configuring A Newly Installed Debian](/blogs/2017/07/08/12.46.html)
 - [Generating Markdown Blogs Without My Scripts](/blogs/2017/07/06/22.37.html)
 - [Stop Writing For A While](/blogs/2017/06/28/19.52.html)
 - [The Trap Of Lodash's merge Function](/blogs/2017/06/14/19.26.html)
