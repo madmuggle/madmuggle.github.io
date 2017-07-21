@@ -1,3 +1,4 @@
+- [The Relationship Between Command "su" And "sudo"](/blogs/2017/07/21/10.55.html)
 - [Something about IMO number](/blogs/2017/07/18/16.55.html)
 - [Use Curl Command To Send multipart/form-data](/blogs/2017/07/13/14.40.html)
 - [Tips On Configuring A Newly Installed Debian](/blogs/2017/07/08/12.46.html)
