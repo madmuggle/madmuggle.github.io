@@ -1,3 +1,4 @@
+- [Why it's called "emoji" instead of "emozi"](/blogs/2017/08/11/13.42.html)
 - [The Command "find" with specified depth](/blogs/2017/07/24/10.43.html)
 - [The Relationship Between Command "su" And "sudo"](/blogs/2017/07/21/10.55.html)
 - [Something about IMO number](/blogs/2017/07/18/16.55.html)
