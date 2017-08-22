@@ -1,4 +1,4 @@
-- [A Special Way Of Using CSS](/blogs/2017/08/22/16.11.html)
+- [Use CSS Selectors For Animations Across Different Elements](/blogs/2017/08/22/16.11.html)
 - [Why is it called "emoji" instead of "emozi" ?](/blogs/2017/08/11/13.42.html)
 - [The Command "find" with specified depth](/blogs/2017/07/24/10.43.html)
 - [The Relationship Between Command "su" And "sudo"](/blogs/2017/07/21/10.55.html)
