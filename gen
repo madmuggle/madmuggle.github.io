@@ -3,13 +3,14 @@
 cat << PREFACE
 > Blogs here are simply to record my thoughts. Contents in these blogs
 > could be wrong. I will fix serious errors when I find them.
-> (things like English syntax errors are not serious ones,
->  I don't have time to check all the blogs I wrote)
+
+> things like English syntax errors are not serious ones,
+> I don't have time to check all the blogs I wrote
 
 
 PREFACE
 
 for f in $(find ./blogs -name '*.md' | sort -r)
-do echo "- [$(head -n1 $f | cut -c3-)]($(echo $f | sed 's#.\(/blogs/.*\)\.md$#\1.html#'))"
+do echo "- [$(head -n1 $f | cut -c3-)]($(echo $f | sed 's#.\(/myblogs/blogs/.*\)\.md$#\1.html#'))"
 done
 
