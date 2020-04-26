@@ -1,3 +1,9 @@
+> Blogs here are simply to record my thoughts. Contents in these blogs
+> could be wrong. I will fix serious errors when I find them.
+> (things like English syntax errors are not serious ones,
+>  I don't have time to check all the blogs I wrote)
+
+
 - [Lexical Binding And `let`, `letrec`(`labels`)](/blogs/2018/02/05/01.06.html)
 - [The `labels` and `letrec`](/blogs/2018/02/04/23.09.html)
 - [A New Redis Client For Node.js](/blogs/2017/11/14/10.22.html)
